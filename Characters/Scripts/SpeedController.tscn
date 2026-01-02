@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx7122tiqy6b3"]
+
+[ext_resource type="Script" uid="uid://cjptwcx75p7yc" path="res://Characters/Scripts/SpeedController.gd" id="1_3ihek"]
+
+[node name="SpeedController" type="Node2D"]
+script = ExtResource("1_3ihek")
