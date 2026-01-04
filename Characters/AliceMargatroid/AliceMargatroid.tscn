@@ -1,10 +1,11 @@
-[gd_scene load_steps=59 format=3 uid="uid://uo4v4ajlvfxk"]
+[gd_scene load_steps=69 format=3 uid="uid://uo4v4ajlvfxk"]
 
 [ext_resource type="Texture2D" uid="uid://cyiilxlho8hvf" path="res://Characters/AliceMargatroid/Sprites/AttackA1.png" id="1_0yy31"]
 [ext_resource type="Texture2D" uid="uid://b2h45ob6tiqlb" path="res://Characters/AliceMargatroid/Sprites/Walk.png" id="1_7w52q"]
 [ext_resource type="Script" uid="uid://c334fih55rke4" path="res://Characters/AliceMargatroid/AliceMargatroid.gd" id="1_sioa2"]
 [ext_resource type="Texture2D" uid="uid://cjwif7diwm0ly" path="res://Characters/AliceMargatroid/Sprites/Jump.png" id="2_5g8cf"]
 [ext_resource type="Texture2D" uid="uid://daljhs3yybn5x" path="res://Characters/AliceMargatroid/Sprites/Sit.png" id="2_fsptr"]
+[ext_resource type="Texture2D" uid="uid://c3wjshfjq3wbe" path="res://Characters/AliceMargatroid/Sprites/AttackA4.png" id="3_v4on8"]
 [ext_resource type="Texture2D" uid="uid://bs53frf524676" path="res://Characters/AliceMargatroid/Sprites/Stand.png" id="4_xmcxv"]
 [ext_resource type="PackedScene" uid="uid://du2ab16vwxmo7" path="res://Characters/Scripts/AnimationController.tscn" id="7_kbbkb"]
 [ext_resource type="PackedScene" uid="uid://cx7122tiqy6b3" path="res://Characters/Scripts/SpeedController.tscn" id="8_kw768"]
@@ -36,6 +37,42 @@ region = Rect2(425, 0, 85, 92)
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqc6i"]
 atlas = ExtResource("1_0yy31")
 region = Rect2(510, 0, 85, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onsd6"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(0, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwt2t"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(73, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01n7e"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(146, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2eta"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(219, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xicrb"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(292, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_060ys"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(365, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wih2"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(438, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbo52"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(511, 0, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg6pc"]
+atlas = ExtResource("3_v4on8")
+region = Rect2(584, 0, 73, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04q52"]
 atlas = ExtResource("2_5g8cf")
@@ -231,6 +268,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_onsd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwt2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01n7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2eta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xicrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_060ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wih2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbo52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg6pc")
+}],
+"loop": true,
+"name": &"attackA4",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_04q52")
 }, {
 "duration": 1.0,
@@ -385,7 +454,8 @@ animation = NodePath("AnimationController")
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_e7l6v")
-animation = &"stand"
+animation = &"attackA4"
+frame_progress = 0.36533558
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 visible = false
